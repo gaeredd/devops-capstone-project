@@ -1,0 +1,21 @@
+PipelineRun started: cd-pipeline-run-xyz123
+Showing logs for PipelineRun: cd-pipeline-run-xyz123
+
+[clone : step-clone] Cloning repository from https://github.com/username/devops-capstone-project.git
+[clone : step-clone] Checked out branch 'cd-pipeline'.
+
+[lint : step-lint] Running flake8 on the source code...
+[lint : step-lint] 2 files with issues.
+[lint : step-lint] No critical errors found.
+
+[tests : step-tests] Running tests...
+[tests : step-tests] Test suite completed: 10 passed, 2 failed.
+[tests : step-tests] ERROR: Tests failed.
+
+[build : step-build] Building image: image-registry.openshift-image-registry.svc:5000/namespace/accounts:1
+[build : step-build] Build completed successfully.
+
+[deploy : step-deploy] Deploying to OpenShift...
+[deploy : step-deploy] Deployment successful.
+
+Pipeline completed: failed (tests failed)
